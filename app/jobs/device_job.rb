@@ -17,6 +17,8 @@ class DeviceJob < ApplicationJob
 
     data = RestClient.post( url, params )
     data = JSON.parse(data)
+    puts data
+    data
 
   end
 end
