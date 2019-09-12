@@ -10,7 +10,8 @@ gem "webpacker", git: "https://github.com/tongueroo/webpacker.git", branch: "jet
 gem "mysql2", "~> 0.5.2"
 
 gem "dynomite"
-gem 'rest-client'
+gem "rest-client"
+gem "haml"
 
 
 # development and test groups are not bundled as part of the deployment
