@@ -19,6 +19,24 @@
   %script{ src: "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js", integrity: "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", crossorigin:"anonymous" }
   %script{ src: "https://kit.fontawesome.com/#{ENV['FONTAWESOME_KIT']}.js", crossorigin: "anonymous" }
 
+  .container
+    .row
+      .col-md-12
+        %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+          %a.navbar-brand{ href: "#" }
+            = @nav_title
+          %button.navbar-toggler{ type: "button", "data-toggle": "collapse", "data-target": "#navbarNavDropdown", "aria-controls": "navbarNavDropdown", "aria-expanded": "false", "aria-label": "Toggle navigation"}
+            %span.navbar-toggler-icon
+          .collapse.navbar-collapse#navbarNavDropdown
+            %ul.navbar-nav.ml-auto
+              %li.nav-item.dropdown
+                %a.nav-link.dropdown-toggle{ href:"#", id: "navbarDropdownMenuLink", role: "button", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" }
+                  = 'Language'
+                .dropdown-menu{ "aria-labelledby": "navbarDropdownMenuLink" }
+                  %a.dropdown-item{ href: en_profiles_path }
+                    = '英文履歷'
+                  %a.dropdown-item{ href: tw_profiles_path }
+                    = '中文履歷'
 
 
   %section.starter

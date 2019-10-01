@@ -1,0 +1,225 @@
+.row
+  .col-md-3
+    .card.mb-3.clear-border
+      .card-body
+        .profile-pic
+          = image_tag("me.jpg")
+
+  .col-md-9
+    .card.mb-3.clear-border.name-text-align
+      .card-body
+        %h1.card-title
+          = 'CALVIN CHU'
+        %p.card-text
+          %i.fa.fa-mobile
+          = '0921-857-258'
+        %p.card-text
+          %i.fa.fa-envelope
+          = 'calvinchu8172@gmail.com'
+        %p.card-text
+          %i.fab.fa-github
+          = link_to 'github.com/calvinchu8172', 'https://github.com/calvinchu8172', target: "_blank", title: 'https://github.com/calvinchu8172'
+
+.card.mb-3
+  .card-header.bg-primary
+    %h6.clear-mb
+      = 'EDUCATION'
+  .card-body
+    %h6.card-title
+      = 'Stevens Institute of Technology Hoboken, NJ, U.S.A 2007/9 ~ 2009/1'
+    %p.card-text
+      = 'Master of Electrical Engineering GPA: 3.8/4.0'
+    %h6.card-title
+      = 'Tamkang University Taipei, Taiwan 1998/9 ~ 2002/1'
+    %p.card-text
+      = 'Bachelor of Electrical Engineering'
+    %h6.card-title
+      = 'ALPHA Camp, Taipei, Taiwan 2014/10 ~ 2014/12'
+    %p.card-text
+      = '3 months full time Web Development with over 500+ hours of learning.'
+    %h6.card-title
+      = 'Amazon Web Services (AWS) Training Taipei, Taiwan 2014/12'
+    %p.card-text
+      = '1 week full time training for Architecting on AWS.'
+
+.card.mb-3
+  .card-header.bg-primary
+    %h6.clear-mb
+      = 'LANGUAGES'
+  .card-body
+    = 'English(TOEIC:830), Japanese(2 yeasrs) and Mandarin.'
+
+.card.mb-3
+  .card-header.bg-primary
+    .h6.clear-mb
+      = 'SKILLS'
+  .card-body
+    %p.card-text
+      = '(Proficient): Ruby, Ruby on Rails, Ruby on Jets, HAML, SCSS, Redis, Docker, Docker-Compose, Bootstrap, Git, Vagrant, Travis-CI, Gitlab-CI, Cucumber, Rspec'
+    %p.card-text
+      = '(Familer): Javascript, CoffeeScript, jQuery, AngularJS, NodeJS, Mocha, Serverless, C, SQL, HTML/CSS, Bash/Shell Script, Chef, AWS Service.'
+
+.card.mb-3
+  .card-header.bg-primary
+    %h6.clear-mb
+      = 'SOFTWARE PROJECTS'
+  .card-body
+    %h6.card-title
+      = 'Personal resume website: '
+      = link_to 'profile.lovefunthing.com', 'https://profile.lovefunthing.com', target: "_blank", title: 'https://profile.lovefunthing.com'
+    %ul
+      %li
+        = 'Serverless static pages and Cronjob service without any server hosting fee.'
+      %li
+        = 'Utilized: Ruby on Jets, Bootstrap, AWS Lambda, API Gateway, ACM (AWS Certificate Management)as SSL certificate, AWS Route53 as DNS.'
+
+    %h6.card-title
+      = 'Loveiplant E-commerce website: '
+      = link_to 'www.loveiplant.com', 'https://www.loveiplant.com', target: "_blank", title: 'https://www.loveiplant.com'
+    %ul
+      %li
+        = 'Developed an E-commerce website and handling customer service.'
+      %li
+        = 'Implement Facebook Social Plugin.'
+      %li
+        = 'Utilized: Wordpress, LAMP Server(Linux, Apache, MySQL, PHP), Let’s encrypt SSL Certificate, AWS Route53 as DNS, AWS Cloudfront, AWS SES as mailer server, AWS S3 as pictures storage.'
+
+    %h6.card-title
+      = 'PCloud Portal device pairing web APP and Restful API Server: '
+      = link_to 'portal.lovefunthing.com', 'https://portal.lovefunthing.com', target: "_blank", title: 'https://portal.lovefunthing.com'
+    %ul
+      %li
+        = 'Structured a website which can let users pair with and then set up their devices.'
+      %li
+        = 'RWD for user register and sign-in flow pages.'
+      %li
+        = 'Utilized: Ruby on Rails, Bootstrap, AngularJS, Redis, MySQL, MongooseIM XMPP server, Bots and device echo simulator based on Ruby code, AWS Route53, AWS SQS, AWS S3, AWS SES, Travis-CI.'
+      %li
+        = 'Deployed by Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL Certificate.'
+
+    %h6.card-title
+      = 'SSO(Single Sign On) OAuth2 sign-in service: '
+      = link_to 'sso.lovefunthing.com', 'https://sso.lovefunthing.com', target: "_blank", title: 'https://sso.lovefunthing.com'
+    %ul
+      %li
+        = 'An user Register and Sign-in Center based on Ruby on Rails and Oauth2 protocol.'
+      %li
+        = 'Implement Google and Facebook Sign-in.'
+      %li
+        = 'RWD.'
+      %li
+        = 'Utilized:  Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53, AWS SES, Travis-CI'
+      %li
+        = 'Deployed by Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL.'
+
+    %h6.card-title
+      = 'DUreading books management web APP: '
+      = link_to 'dureading.lovefunthing.com', 'https://dureading.lovefunthing.com', target: "_blank", title: 'https://dureading.lovefunthing.com'
+    %ul
+      %li
+        = 'Implement OAuth2 client and Sign in to SSO Server.'
+      %li
+        = 'RWD.'
+      %li
+        = 'Utilized: Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53 as DNS, AWS S3 as books pictures storage.'
+      %li
+        = 'Deployed by Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL Certificate.'
+
+    %h6.card-title
+      = 'PCstore E-commerce web APP: '
+      = link_to 'pcstore.lovefunthing.com', 'https://pcstore.lovefunthing.com', target: "_blank", title: 'https://pcstore.lovefunthing.com'
+    %ul
+      %li
+        = 'Implement OAuth2 client and Sign in to SSO Server.'
+      %li
+        = 'Both forestage payment flow and backstage including products and bills management with Ruby on Rails.'
+      %li
+        = 'Utilize Braintree as a PayPal service.'
+      %li
+        = 'RWD.'
+      %li
+        = 'Utilized: Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53 as DNS, AWS S3 as products pictures storage.'
+      %li
+        = 'Deployed by Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL.'
+
+
+.card.mb-3
+  .card-header.bg-primary
+    %h6.clear-mb
+      = 'WORK EXPERIENCE'
+  .card-body
+    %h6.card-title
+      = 'Loveiplant Plant Shop - Tainan, Taiwan'
+    %h6.card-title
+      = 'Web Developer 2018/01 ~ now'
+    %ul
+      %li
+        = 'Built an E-commerce website to broaden business.'
+      %li
+        = 'Discussing the design requirements with the physical store owner.'
+      %li
+        = 'Implement Social Network login, Facebook Massanger, Faceboobook Comment, Facebook Fans page, Credit card payment in Wordpress.'
+      %li
+        = 'Implement Google GTM and GA code for user behavior tracking.'
+      %li
+        = 'Manage website content, like products, events and blogs.'
+
+    %h6.card-title
+      = 'Ecowork Inc. - Taipei, Taiwan'
+    %h6.card-title
+      = 'Fullstack Platform Engineer 2015/6 ~ 2017/11'
+    %ul
+      %li
+        = 'Collaborated with customers and yield PRD(Product Requirement Document), SA(System Analysis), SD(System Design), API document and user guide.'
+      %li
+        = 'Optimized the current running project and deployed updated versions regularly.'
+      %li
+        = 'Optimized PCloud Portal Server based on AngularJS, Ruby on Rails, deployed using chef and AWS OpsWorks.'
+      %li
+        = 'Developed Restful API Server based on Ruby on Rails, deployed using chef and AWS OpsWorks.'
+      %li
+        = 'Structured OAuth2 single sign-on server and Oauth2 sign-in client.'
+      %li
+        = 'Developed Serverless Nodejs Notification Broadcast Service deployed on AWS Lambda and API Gateway.'
+      %li
+        = 'Improved the programming quality by building automatic test and generate test-report in every project and implemented CI(continuous integration) with gitlab-CI'
+      %li
+        = 'Enhanced the early notification by building monitoring and alert system.'
+
+    %h6.card-title
+      = 'Global EduGate - Taipei, Taiwan'
+    %h6.card-title
+      = 'VP of Sales and Marketing 2014/5 ~ 2014/9'
+    %ul
+      %li
+        = 'Presented to Ministry of Education, 2 Taiwanese universities to explore business partnership opportunities.'
+      %li
+        = 'Conducted market sizing and competitive analysis of online degree and certificate industry to assess business opportunity.'
+
+    %h6.card-title
+      = 'Japan Display Inc. (JDI) - Taipei, Taiwan'
+    %h6.card-title
+      = 'Field Application Engineer 2013/1 ~ 2014/2'
+    %ul
+      %li
+        = 'Won 4 contracts including Google Nexus 7, Sony Xperia T3, Garmin sports watch and sports camera LCD products, total amount of revenue over USD 50M per year.'
+      %li
+        = 'Project managed both Taiwan client (ASUS, Sony and Garmin) and internal engineering (R&D in Japan and Manufacturing in China) teams, making sure projects were completed on schedule.'
+      %li
+        = 'Directly supported client engineers on technical issues in using advanced LCD panel, ensuring projects successfully went into mass production.'
+
+    %h6.card-title
+      = 'Chimei-Innolux Corp. (CMI) - Chunan, Taiwan'
+    %h6.card-title
+      = 'Electrical Engineer 2010/1 ~ 2013/12'
+    %ul
+      %li
+        = 'Optimized manufacturing process by developing in-house software in C, improving production efficiency by 10%.'
+      %li
+        = 'Led electrical engineer effort on all projects with Nokia.'
+      %li
+        = 'Designed Nokia projects with monthly shipment of 2 million units.'
+      %li
+        = 'Designed the connection circuit between LCD module and mobile phone.'
+      %li
+        = 'Optimized the optical performance of LCD module by tuning the firmware in driver IC. o Verified the products following Nokia’s specifications and solved the issues with Nokia.'
