@@ -2,6 +2,7 @@
 .bundle
 .byebug_history
 .DS_Store
+.versions.conf
 .env*
 /node_modules
 /public/packs
