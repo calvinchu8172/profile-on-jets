@@ -15,10 +15,45 @@ class DeviceJob < ApplicationJob
       module: '[{"name":"DDNS", "ver":"1" }, {"name":"pairing", "ver":"button"}, {"name":"upnp", "ver":"2" }, {"name":"indicator", "ver":"1" }, {"name":"package", "ver":"1" }]'
     }
 
-    data = RestClient.post( url, params )
-    data = JSON.parse(data)
-    puts data
-    data
+    begin
+      data = RestClient.post( url, params )
+      data = JSON.parse(data)
+      puts data
+      data
+    rescue RestClient::ExceptionWithResponse => e
+      err = JSON.parse(e.response)
+      puts err
+      err
+    end
 
   end
+
+  rate "30 minutes"
+  def unpair
+
+    url = ENV["PORTAL_DOMAIN"] + '/d/1/unpair'
+
+    headers = {
+      'X-Signature': ENV["DEVICE_UNPAIR_TEMPSERIALNUM0000_SIGNATURE"]
+    }
+
+    params = {
+      certificate_serial: '1002',
+      mac_address: '0023f8311041',
+      serial_number: 'TEMPSERIALNUM0000'
+    }
+
+    begin
+      data = RestClient::Request.execute( method: :delete, url: url, payload: params, headers: headers)
+      data = JSON.parse(data)
+      puts data
+      data
+    rescue RestClient::ExceptionWithResponse => e
+      err = JSON.parse(e.response)
+      puts err
+      err
+    end
+
+  end
+
 end
