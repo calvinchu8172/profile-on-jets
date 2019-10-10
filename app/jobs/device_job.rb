@@ -39,7 +39,7 @@ class DeviceJob < ApplicationJob
 
     params = {
       certificate_serial: '1002',
-      mac_address: '0023f8311041',
+      mac_address: '0023F8311041',
       serial_number: 'TEMPSERIALNUM0000'
     }
 
