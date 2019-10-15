@@ -12,218 +12,220 @@
           = '朱冠穎'
         %p.card-text
           %i.fa.fa-mobile
-          = '0921-857-258'
+          = link_to '+886-921-857-258', 'tel:+886-921-857-258'
         %p.card-text
           %i.fa.fa-envelope
-          = 'calvinchu8172@gmail.com'
+          = mail_to 'calvinchu8172@gmail.com'
         %p.card-text
           %i.fab.fa-github
           = link_to 'github.com/calvinchu8172', 'https://github.com/calvinchu8172', target: "_blank", title: 'https://github.com/calvinchu8172'
         %p.card-text
           %i.fas.fa-map-marker-alt
-          = '台北市, 台灣'
+          = link_to '台北市，台灣', 'https://goo.gl/maps/t5BQHejAoh5tiMP88', target: "_blank", title: '台北市，台灣'
 
 
 .card.mb-3
   .card-header.bg-primary
     %h6.clear-mb
-      = 'EDUCATION'
+      = '學歷'
   .card-body
     %h6.card-title
-      = 'Stevens Institute of Technology Hoboken, NJ, U.S.A 2007/9 ~ 2009/1'
+      = '史蒂文斯理工學院，霍博肯，紐澤西，美國 2007/9 ~ 2009/1'
     %p.card-text
-      = 'Master of Electrical Engineering GPA: 3.8/4.0'
+      = '電機工程學系碩士 GPA: 3.8/4.0'
     %h6.card-title
-      = 'Tamkang University Taipei, Taiwan 1998/9 ~ 2002/1'
+      = '淡江大學 1998/9 ~ 2002/1'
     %p.card-text
-      = 'Bachelor of Electrical Engineering'
+      = '電機工程學系學士'
     %h6.card-title
-      = 'ALPHA Camp, Taipei, Taiwan 2014/10 ~ 2014/12'
+      = 'ALPHA Camp 2014/10 ~ 2014/12'
     %p.card-text
-      = '3 months full time Web Development with over 500+ hours of learning.'
+      = '三個月全職全端網頁課程'
     %h6.card-title
-      = 'Amazon Web Services (AWS) Training Taipei, Taiwan 2014/12'
+      = 'Amazon Web Services (AWS) 雲端計算課程 2014/12'
     %p.card-text
-      = '1 week full time training for Architecting on AWS.'
+      = 'AWS 舉辦的為期一週的訓練課程'
 
 .card.mb-3
   .card-header.bg-primary
     %h6.clear-mb
-      = 'LANGUAGES'
+      = '語言'
   .card-body
-    = 'English(TOEIC:830), Japanese(2 yeasrs) and Mandarin.'
+    = '英語(TOEIC:830)，日語(學習兩年)，中文'
 
 .card.mb-3
   .card-header.bg-primary
     .h6.clear-mb
-      = 'SKILLS'
+      = '技能'
   .card-body
     %p.card-text
-      = '(Proficient): Ruby, Ruby on Rails, Ruby on Jets, HAML, SCSS, Redis, Docker, Docker-Compose, Bootstrap, Git, Vagrant, Travis-CI, Gitlab-CI, Cucumber, Rspec'
+      = '擅長： '
+      - @proficient.each do |i|
+        %span.badge.badge-primary
+          = i
     %p.card-text
-      = '(Familer): Javascript, CoffeeScript, jQuery, AngularJS, NodeJS, Mocha, Serverless, C, SQL, HTML/CSS, Bash/Shell Script, Chef, AWS Service.'
+      = '熟悉： '
+      - @familier.each do |i|
+        %span.badge.badge-primary
+          = i
 
 .card.mb-3
   .card-header.bg-primary
     %h6.clear-mb
-      = 'SOFTWARE PROJECTS'
+      = '作品'
   .card-body
     %h6.card-title
-      = 'Personal resume website: '
+      = '個人履歷網站：'
       = link_to 'profile.lovefunthing.com', 'https://profile.lovefunthing.com', target: "_blank", title: 'https://profile.lovefunthing.com'
     %ul
       %li
-        = 'Serverless static pages and Cronjob service without any server hosting fee.'
+        = '處理靜態網頁與排程工作，使用 Serverless 架構，不需要任何伺服器費用。自適應網頁。'
       %li
-        = 'Utilized: Ruby on Jets, Bootstrap, AWS Lambda, API Gateway, ACM (AWS Certificate Management)as SSL certificate, AWS Route53 as DNS.'
+        = '使用工具：Ruby on Jets, Bootstrap, AWS Lambda, API Gateway, ACM(AWS Certificate Management) as SSL certificate, AWS Route53 as DNS.'
 
     %h6.card-title
-      = 'Loveiplant E-commerce website: '
+      = 'Loveiplant 購物網站：'
       = link_to 'www.loveiplant.com', 'https://www.loveiplant.com', target: "_blank", title: 'https://www.loveiplant.com'
     %ul
       %li
-        = 'Developed an E-commerce website and handling customer service.'
+        = '一個電商，部落格，形象與客服網站。'
       %li
-        = 'Implement Facebook Social Plugin.'
+        = '自適應網頁。'
       %li
-        = 'Utilized: Wordpress, LAMP Server(Linux, Apache, MySQL, PHP), Let’s encrypt SSL Certificate, AWS Route53 as DNS, AWS Cloudfront, AWS SES as mailer server, AWS S3 as pictures storage.'
+        = '使用工具：Wordpress, LAMP Server(Linux, Apache, MySQL, PHP), Let’s encrypt SSL Certificate, AWS Route53 as DNS, AWS Cloudfront, AWS SES as mailer server, AWS S3 as pictures storage.'
 
     %h6.card-title
-      = 'PCloud Portal device pairing web APP and Restful API Server: '
+      = 'PCloud Portal and Restful API Server: '
       = link_to 'portal.lovefunthing.com', 'https://portal.lovefunthing.com', target: "_blank", title: 'https://portal.lovefunthing.com'
     %ul
       %li
-        = 'Structured a website which can let users pair with and then set up their devices.'
+        = '使用者可配對並設定裝置。'
       %li
-        = 'RWD for user register and sign-in flow pages.'
+        = '使用 XMPP Server、Redis、AWS SQS 作為 Rails 網站與裝置溝通的中介機制'
       %li
-        = 'Utilized: Ruby on Rails, Bootstrap, AngularJS, Redis, MySQL, MongooseIM XMPP server, Bots and device echo simulator based on Ruby code, AWS Route53, AWS SQS, AWS S3, AWS SES, Travis-CI.'
+        = '使用 Ruby 編寫訊息處理機器人，不斷處理 XMPP Server、Redis、AWS SQS 間的訊息。'
       %li
-        = 'Deployed by Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL Certificate.'
+        = '同樣也是 RESTful Server 提供裝置與開發者存取資料。'
+      %li
+        = '使用工具： Ruby on Rails, Bootstrap, AngularJS, Redis, MySQL, MongooseIM XMPP server, AWS Route53, AWS SQS, AWS S3, AWS SES, Travis-CI.'
+      %li
+        = '部署工具：Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL Certificate.'
 
     %h6.card-title
-      = 'SSO(Single Sign On) OAuth2 sign-in service: '
+      = 'SSO 單一登入系統：'
       = link_to 'sso.lovefunthing.com', 'https://sso.lovefunthing.com', target: "_blank", title: 'https://sso.lovefunthing.com'
     %ul
       %li
-        = 'An user Register and Sign-in Center based on Ruby on Rails and Oauth2 protocol.'
+        = '可透過 Oauth2 機制實現各網站的使用者可經由這網站註冊、登入、集中管理使用者資料。而不需要各網站各一個登入系統'
       %li
-        = 'Implement Google and Facebook Sign-in.'
+        = '除 Email 登入外也可透過 Google 與 Facebook 社群帳號登入。'
       %li
-        = 'RWD.'
+        = '自適應網頁。'
       %li
-        = 'Utilized:  Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53, AWS SES, Travis-CI'
+        = '使用工具：Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53, AWS SES, Travis-CI'
       %li
-        = 'Deployed by Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL.'
+        = '部署工具：Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL.'
 
     %h6.card-title
-      = 'DUreading books management web APP: '
+      = 'DUreading 書籍管理網站：'
       = link_to 'dureading.lovefunthing.com', 'https://dureading.lovefunthing.com', target: "_blank", title: 'https://dureading.lovefunthing.com'
     %ul
       %li
-        = 'Implement OAuth2 client and Sign in to SSO Server.'
+        = '可透過 Oauth2 機制，登入 SSO 單一登入系統。'
       %li
-        = 'RWD.'
+        = '自適應網頁。'
       %li
-        = 'Utilized: Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53 as DNS, AWS S3 as books pictures storage.'
+        = '使用工具：Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53 as DNS, AWS S3 as books pictures storage.'
       %li
-        = 'Deployed by Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL Certificate.'
+        = '部署工具：Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL Certificate.'
 
     %h6.card-title
-      = 'PCstore E-commerce web APP: '
+      = 'PCstore 購物網站：'
       = link_to 'pcstore.lovefunthing.com', 'https://pcstore.lovefunthing.com', target: "_blank", title: 'https://pcstore.lovefunthing.com'
     %ul
       %li
-        = 'Implement OAuth2 client and Sign in to SSO Server.'
+        = '可透過 Oauth2 機制，登入 SSO 單一登入系統。'
       %li
-        = 'Both forestage payment flow and backstage including products and bills management with Ruby on Rails.'
+        = '前台購物流程，與後台管理系統。'
       %li
-        = 'Utilize Braintree as a PayPal service.'
+        = '使用 Paypal 付款。'
       %li
-        = 'RWD.'
+        = '自適應網頁。'
       %li
-        = 'Utilized: Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53 as DNS, AWS S3 as products pictures storage.'
+        = '使用工具：Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53 as DNS, AWS S3 as products pictures storage.'
       %li
-        = 'Deployed by Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL.'
+        = '部署工具：Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL.'
 
 
 .card.mb-3
   .card-header.bg-primary
     %h6.clear-mb
-      = 'WORK EXPERIENCE'
+      = '經歷'
   .card-body
     %h6.card-title
-      = 'Loveiplant Plant Shop - Tainan, Taiwan'
+      = 'Loveiplant Plant Shop - 台南市，台灣'
     %h6.card-title
-      = 'Web Developer 2018/01 ~ now'
+      = '遠端全端工程師 2018/01 ~ now'
     %ul
       %li
-        = 'Built an E-commerce website to broaden business.'
+        = '建立一電商網站為擴展實體店面業務。'
       %li
-        = 'Discussing the design requirements with the physical store owner.'
+        = '與實體店面店主溝通網站需求。'
       %li
-        = 'Implement Social Network login, Facebook Massanger, Faceboobook Comment, Facebook Fans page, Credit card payment in Wordpress.'
-      %li
-        = 'Implement Google GTM and GA code for user behavior tracking.'
-      %li
-        = 'Manage website content, like products, events and blogs.'
+        = '更新網站內容，維持網站運作。'
 
     %h6.card-title
-      = 'Ecowork Inc. - Taipei, Taiwan'
+      = 'Ecowork Inc. - 台北市，台灣'
     %h6.card-title
-      = 'Fullstack Platform Engineer 2015/6 ~ 2017/11'
+      = '全端工程師 2015/6 ~ 2017/11'
     %ul
       %li
-        = 'Collaborated with customers and yield PRD(Product Requirement Document), SA(System Analysis), SD(System Design), API document and user guide.'
+        = '與客戶合作產出前期設計所需文件：PRD(Product Requirement Document)、SA(System Analysis)、SD(System Design)、API 文件、使用說明書。'
       %li
-        = 'Optimized the current running project and deployed updated versions regularly.'
+        = '優化現有專案與定期更新上線。'
       %li
-        = 'Optimized PCloud Portal Server based on AngularJS, Ruby on Rails, deployed using chef and AWS OpsWorks.'
+        = '研究新技術並導入新專案，盡可能達成降低維運成本。'
       %li
-        = 'Developed Restful API Server based on Ruby on Rails, deployed using chef and AWS OpsWorks.'
+        = '導入自動化測試與 CI(continuous integration 持續整合)，可產出自動化測試報告，保障專案品質。'
       %li
-        = 'Structured OAuth2 single sign-on server and Oauth2 sign-in client.'
+        = '建立監控與通知系統，問題發生可早期通知。'
       %li
-        = 'Developed Serverless Nodejs Notification Broadcast Service deployed on AWS Lambda and API Gateway.'
-      %li
-        = 'Improved the programming quality by building automatic test and generate test-report in every project and implemented CI(continuous integration) with gitlab-CI'
-      %li
-        = 'Enhanced the early notification by building monitoring and alert system.'
+        = '常用工具: AWS, Ruby on Rails, NodeJS, GIT, Gitlab-CI, Javascript, Coffeescript, HAML/HTML, SCSS/CSS'
 
     %h6.card-title
-      = 'Global EduGate - Taipei, Taiwan'
+      = 'Global EduGate - 台北市，台灣'
     %h6.card-title
       = 'VP of Sales and Marketing 2014/5 ~ 2014/9'
     %ul
       %li
-        = 'Presented to Ministry of Education, 2 Taiwanese universities to explore business partnership opportunities.'
+        = '進行線上教育之市場分析與調查。'
       %li
-        = 'Conducted market sizing and competitive analysis of online degree and certificate industry to assess business opportunity.'
+        = '至教育部與台灣各大學簡報推廣與尋找線上教育合作機會。'
 
     %h6.card-title
-      = 'Japan Display Inc. (JDI) - Taipei, Taiwan'
+      = 'Japan Display Inc. (JDI) - 台北市，台灣'
     %h6.card-title
       = 'Field Application Engineer 2013/1 ~ 2014/2'
     %ul
       %li
-        = 'Won 4 contracts including Google Nexus 7, Sony Xperia T3, Garmin sports watch and sports camera LCD products, total amount of revenue over USD 50M per year.'
+        = '為公司贏得四項專案：Google Nexus 7、Sony Xperia T3、Garmin運動手錶、 Garmin 運動攝影機的 LCD 面板，總利潤為每年五千萬美金。'
       %li
-        = 'Project managed both Taiwan client (ASUS, Sony and Garmin) and internal engineering (R&D in Japan and Manufacturing in China) teams, making sure projects were completed on schedule.'
+        = '管理專案進行，確保客戶(ASUS,  Sony  與  Garmin)與公司內部(日本研發人員與中國工廠)的專案符合時程。'
       %li
-        = 'Directly supported client engineers on technical issues in using advanced LCD panel, ensuring projects successfully went into mass production.'
+        = '當客戶使用先進面板時,提供即時的技術支援並解決技術上的問題,確保案子進入量產。'
 
     %h6.card-title
-      = 'Chimei-Innolux Corp. (CMI) - Chunan, Taiwan'
+      = '群創光電 - 竹南，台灣'
     %h6.card-title
       = 'Electrical Engineer 2010/1 ~ 2013/12'
     %ul
       %li
-        = 'Optimized manufacturing process by developing in-house software in C, improving production efficiency by 10%.'
+        = '主導 Nokia 手機使用的面板電子系統相關設計，負責的 Nokia   相關專案月出貨量約兩百萬。'
       %li
-        = 'Led electrical engineer effort on all projects with Nokia.'
+        = '負責撰寫研發及工廠生產系統的C語言程式，並進行優化，增進效率達百分之十。'
       %li
-        = 'Designed Nokia projects with monthly shipment of 2 million units.'
+        = '設計面板與手機主機板間連接電路。'
       %li
-        = 'Designed the connection circuit between LCD module and mobile phone.'
+        = '優化面板驅動IC韌體。'
       %li
-        = 'Optimized the optical performance of LCD module by tuning the firmware in driver IC. o Verified the products following Nokia’s specifications and solved the issues with Nokia.'
+        = '驗證面板符合Nokia相關規格，並與Nokia合作解決Issue。'

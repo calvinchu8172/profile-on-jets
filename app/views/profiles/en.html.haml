@@ -12,16 +12,16 @@
           = 'CALVIN CHU'
         %p.card-text
           %i.fa.fa-mobile
-          = '0921-857-258'
+          = link_to '+886-921-857-258', 'tel:+886-921-857-258'
         %p.card-text
           %i.fa.fa-envelope
-          = 'calvinchu8172@gmail.com'
+          = mail_to 'calvinchu8172@gmail.com'
         %p.card-text
           %i.fab.fa-github
           = link_to 'github.com/calvinchu8172', 'https://github.com/calvinchu8172', target: "_blank", title: 'https://github.com/calvinchu8172'
         %p.card-text
           %i.fas.fa-map-marker-alt
-          = 'Taipei, Taiwan'
+          = link_to 'Taipei City, Taiwan', 'https://goo.gl/maps/t5BQHejAoh5tiMP88', target: "_blank", title: 'Taipei City, Taiwan'
 
 .card.mb-3
   .card-header.bg-primary
@@ -50,7 +50,7 @@
     %h6.clear-mb
       = 'LANGUAGES'
   .card-body
-    = 'English(TOEIC:830), Japanese(2 yeasrs) and Mandarin.'
+    = 'English(TOEIC:830), Japanese(2 yeasrs) and Mandarin(Native).'
 
 .card.mb-3
   .card-header.bg-primary
@@ -58,9 +58,15 @@
       = 'SKILLS'
   .card-body
     %p.card-text
-      = '(Proficient): Ruby, Ruby on Rails, Ruby on Jets, HAML, SCSS, Redis, Docker, Docker-Compose, Bootstrap, Git, Vagrant, Travis-CI, Gitlab-CI, Cucumber, Rspec'
+      = 'Proficient: '
+      - @proficient.each do |i|
+        %span.badge.badge-primary
+          = i
     %p.card-text
-      = '(Familer): Javascript, CoffeeScript, jQuery, AngularJS, NodeJS, Mocha, Serverless, C, SQL, HTML/CSS, Bash/Shell Script, Chef, AWS Service.'
+      = 'Familier: '
+      - @familier.each do |i|
+        %span.badge.badge-primary
+          = i
 
 .card.mb-3
   .card-header.bg-primary
@@ -72,7 +78,7 @@
       = link_to 'profile.lovefunthing.com', 'https://profile.lovefunthing.com', target: "_blank", title: 'https://profile.lovefunthing.com'
     %ul
       %li
-        = 'Serverless static pages and Cronjob service without any server hosting fee.'
+        = 'A Serverless structure to host static pages and cron jobs without any server hosting fee.'
       %li
         = 'Utilized: Ruby on Jets, Bootstrap, AWS Lambda, API Gateway, ACM (AWS Certificate Management)as SSL certificate, AWS Route53 as DNS.'
 
@@ -81,22 +87,24 @@
       = link_to 'www.loveiplant.com', 'https://www.loveiplant.com', target: "_blank", title: 'https://www.loveiplant.com'
     %ul
       %li
-        = 'Developed an E-commerce website and handling customer service.'
-      %li
-        = 'Implement Facebook Social Plugin.'
+        = 'An E-commerce, blog, store image and customer service website.'
       %li
         = 'Utilized: Wordpress, LAMP Server(Linux, Apache, MySQL, PHP), Let’s encrypt SSL Certificate, AWS Route53 as DNS, AWS Cloudfront, AWS SES as mailer server, AWS S3 as pictures storage.'
 
     %h6.card-title
-      = 'PCloud Portal device pairing web APP and Restful API Server: '
+      = 'PCloud Portal and Restful API Server: '
       = link_to 'portal.lovefunthing.com', 'https://portal.lovefunthing.com', target: "_blank", title: 'https://portal.lovefunthing.com'
     %ul
       %li
-        = 'Structured a website which can let users pair with and then set up their devices.'
+        = 'A Rails website as an user interface to pair with and configure their devices.'
       %li
-        = 'RWD for user register and sign-in flow pages.'
+        = 'A communicating mechanism between Rails website and devices structured with XMPP Server, Redis and AWS SQS.'
       %li
-        = 'Utilized: Ruby on Rails, Bootstrap, AngularJS, Redis, MySQL, MongooseIM XMPP server, Bots and device echo simulator based on Ruby code, AWS Route53, AWS SQS, AWS S3, AWS SES, Travis-CI.'
+        = 'Bots based on Ruby code handle the message between XMPP Server, Redis and AWS SQS.'
+      %li
+        = 'A RESTful API Server allows devices or developers to access data.'
+      %li
+        = 'Utilized: Ruby on Rails, Bootstrap, AngularJS, Redis, MySQL, MongooseIM XMPP server, AWS Route53, AWS SQS, AWS S3, AWS SES, Travis-CI.'
       %li
         = 'Deployed by Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL Certificate.'
 
@@ -111,7 +119,7 @@
       %li
         = 'RWD.'
       %li
-        = 'Utilized:  Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53, AWS SES, Travis-CI'
+        = 'Utilized: Ruby on Rails, HAML, Bootstrap, jQuery, AWS Route53, AWS SES, Travis-CI'
       %li
         = 'Deployed by Unicorn, Nginx, Docker, Docker-compose, Let’s encrypt SSL.'
 
@@ -152,20 +160,16 @@
       = 'WORK EXPERIENCE'
   .card-body
     %h6.card-title
-      = 'Loveiplant Plant Shop - Tainan, Taiwan'
+      = 'Loveiplant Plant Store - Tainan, Taiwan'
     %h6.card-title
       = 'Web Developer 2018/01 ~ now'
     %ul
       %li
         = 'Built an E-commerce website to broaden business.'
       %li
-        = 'Discussing the design requirements with the physical store owner.'
+        = 'Communicated the design requirements with the physical store owner.'
       %li
-        = 'Implement Social Network login, Facebook Massanger, Faceboobook Comment, Facebook Fans page, Credit card payment in Wordpress.'
-      %li
-        = 'Implement Google GTM and GA code for user behavior tracking.'
-      %li
-        = 'Manage website content, like products, events and blogs.'
+        = 'Managed website content, such as products, events, blogs, etc.'
 
     %h6.card-title
       = 'Ecowork Inc. - Taipei, Taiwan'
@@ -185,9 +189,13 @@
       %li
         = 'Developed Serverless Nodejs Notification Broadcast Service deployed on AWS Lambda and API Gateway.'
       %li
-        = 'Improved the programming quality by building automatic test and generate test-report in every project and implemented CI(continuous integration) with gitlab-CI'
+        = 'Researched and implemented new technology in new projects to reduce the host cost.'
+      %li
+        = 'Improved the programming quality by building automatic test and generate test-report in every project and implemented CI(continuous integration) with Gitlab-CI'
       %li
         = 'Enhanced the early notification by building monitoring and alert system.'
+      %li
+        = 'Leveraged Knowledge: AWS, Ruby on Rails, NodeJS, GIT, Gitlab-CI, Javascript, Coffeescript, HAML/HTML, SCSS/CSS'
 
     %h6.card-title
       = 'Global EduGate - Taipei, Taiwan'
@@ -225,4 +233,6 @@
       %li
         = 'Designed the connection circuit between LCD module and mobile phone.'
       %li
-        = 'Optimized the optical performance of LCD module by tuning the firmware in driver IC. o Verified the products following Nokia’s specifications and solved the issues with Nokia.'
+        = 'Optimized the optical performance of LCD module by tuning the firmware in driver IC.'
+      %li
+        = 'Verified the products following Nokia’s specifications and solved the issues with Nokia.'
