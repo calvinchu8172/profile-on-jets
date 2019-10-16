@@ -8,4 +8,5 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import '../src/jets/crud'
+import '../src/jets/navbar'
 console.log('Hello World from Webpacker')
