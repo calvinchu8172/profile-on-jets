@@ -7,6 +7,13 @@ Jets.application.routes.draw do
       get "tw"
     end
   end
+  resources :recommendation_letters, only: [] do
+    collection do
+      get "eiji_sakai"
+      get "gary_hsu"
+      get "hideo_kataoka"
+    end
+  end
 
   # The jets/public#show controller can serve static utf8 content out of the public folder.
   # Note, as part of the deploy process Jets uploads files in the public folder to s3

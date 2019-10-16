@@ -1,0 +1,2 @@
+module RecommendationLettersHelper
+end
