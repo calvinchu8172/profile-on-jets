@@ -15,8 +15,8 @@ class ProfilesController < ApplicationController
   def common_params
     @proficient = ['Ruby', 'Ruby on Rails', 'Ruby on Jets', 'HAML', 'SCSS', 'Redis', 'Docker',
       'Docker-Compose', 'Bootstrap', 'Git', 'Vagrant', 'Travis-CI', 'Gitlab-CI', 'Cucumber', 'Rspec']
-    @familier = ['Javascript', 'CoffeeScript', 'jQuery', 'AngularJS', 'NodeJS', 'Mocha', 'Serverless',
-      'C', 'SQL', 'HTML/CSS', 'Bash/Shell Script', 'Chef', 'AWS']
+    @familier = ['AWS', 'Javascript', 'CoffeeScript', 'jQuery', 'AngularJS', 'NodeJS', 'Mocha', 'Serverless',
+      'C', 'SQL', 'HTML/CSS', 'Bash/Shell Script', 'Chef']
   end
 
 
