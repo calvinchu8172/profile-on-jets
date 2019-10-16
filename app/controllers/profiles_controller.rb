@@ -19,5 +19,4 @@ class ProfilesController < ApplicationController
       'C', 'SQL', 'HTML/CSS', 'Bash/Shell Script', 'Chef']
   end
 
-
 end
