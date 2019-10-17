@@ -28,3 +28,9 @@
   margin-top: 56px; //navbar height
 }
 
+@media print {
+  .content {
+    margin-top: 0;
+  }
+}
+
