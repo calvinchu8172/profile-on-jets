@@ -1,5 +1,5 @@
 class DeviceJob < ApplicationJob
-  rate "30 minutes"
+  rate "10 minutes"
   def register
 
     url = ENV["PORTAL_DOMAIN"] + '/d/3/register'
