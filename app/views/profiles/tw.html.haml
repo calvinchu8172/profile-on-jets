@@ -37,6 +37,12 @@
       = '淡江大學 - 1998/9 ~ 2002/1'
     %p.card-text
       = '電機工程學系學士'
+
+.card.mb-3
+  .card-header.bg-primary
+    %h6.clear-mb
+      = '程式課程'
+  .card-body
     %h6.card-title
       = 'ALPHA Camp - 2014/10 ~ 2014/12'
     %p.card-text
@@ -66,6 +72,11 @@
     %p.card-text
       = '熟悉： '
       - @familier.each do |i|
+        %span.badge.badge-primary
+          = i
+    %p.card-text
+      = '常用工具： '
+      - @tools.each do |i|
         %span.badge.badge-primary
           = i
 

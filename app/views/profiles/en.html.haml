@@ -36,6 +36,12 @@
       = 'Tamkang University - Taipei, Taiwan 1998/9 ~ 2002/1'
     %p.card-text
       = 'Bachelor of Electrical Engineering'
+
+.card.mb-3
+  .card-header.bg-primary
+    %h6.clear-mb
+      = 'PROGRAMMING COURSES'
+  .card-body
     %h6.card-title
       = 'ALPHA Camp - Taipei, Taiwan 2014/10 ~ 2014/12'
     %p.card-text
@@ -67,6 +73,11 @@
       - @familier.each do |i|
         %span.badge.badge-primary
           = i
+    %p.card-text
+      = 'Programming tools: '
+      - @tools.each do |i|
+        %span.badge.badge-primary
+          = i
 
 .card.mb-3
   .card-header.bg-primary
@@ -82,7 +93,7 @@
       %li
         = 'RWD and embedded GA and GTM code.'
       %li
-        = 'Utilized: Ruby on Jets, HAML, SCSS, Javascript, Bootstrap, AWS Lambda, API Gateway, ACM(AWS Certificate Management) as SSL Certificate, AWS Route53 as DNS.'
+        = 'Utilized: Ruby on Jets, HAML, SCSS, Javacript, Bootstrap, AWS Lambda, API Gateway, ACM(AWS Certificate Management) as SSL Certificate, AWS Route53 as DNS.'
 
     %h6.card-title
       = 'Loveiplant E-commerce website: '

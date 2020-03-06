@@ -17,6 +17,8 @@ class ProfilesController < ApplicationController
       'Docker-Compose', 'Bootstrap', 'Git', 'Vagrant', 'Travis-CI', 'Gitlab-CI', 'Cucumber', 'Rspec']
     @familier = ['AWS', 'Javascript', 'CoffeeScript', 'jQuery', 'AngularJS', 'NodeJS', 'Mocha', 'Serverless',
       'C', 'SQL', 'HTML/CSS', 'Bash/Shell Script', 'Chef']
+    @tools = ['iTerm2 (macOS Terminal)','Sublime Text 3 (code editor)', 'Sequel Pro (MySQL client)', 'Medis (Redis client)',
+      'SourceTree (Git GUI)', 'Postman (API client)', 'Typora (Markdown editor)']
   end
 
 end
