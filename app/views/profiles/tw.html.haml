@@ -1,11 +1,8 @@
 .row
-  .col-md-3
-    .card.mb-3.clear-border
-      .card-body
-        .profile-pic
-          = image_tag("me.jpg")
+  .col-md-4
+    = render 'profiles/picture'
 
-  .col-md-9
+  .col-md-8
     .card.mb-3.clear-border.name-text-align
       .card-body
         %h1.card-title
