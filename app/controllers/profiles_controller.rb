@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
   end
 
   def tw
-    @nav_title = '中文履歷'
+    @nav_title = '台灣華語履歷'
   end
 
   private
