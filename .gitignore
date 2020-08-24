@@ -3,6 +3,8 @@
 .byebug_history
 .DS_Store
 .versions.conf
+.nvmrc
+.yvmrc
 .env*
 /node_modules
 /public/packs

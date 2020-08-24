@@ -3,11 +3,11 @@ class ProfilesController < ApplicationController
   before_action :common_params
 
   def en
-    @nav_title = 'English Profile'
+    @nav_title = 'Profile'
   end
 
   def tw
-    @nav_title = '台灣華語履歷'
+    @nav_title = '履歷'
   end
 
   private
