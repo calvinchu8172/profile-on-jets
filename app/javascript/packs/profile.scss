@@ -11,12 +11,17 @@
   text-align: right;
 }
 
-.profile-pic {
+.profile-pic, .medal-pic {
   img {
     width: 100%;
     display: block;
     margin: auto;
   }
+}
+
+.bg-camouflage {
+  background-image: url("/images/camouflage.jpg");
+  background-size: 200px 300px;
 }
 
 @media (max-width: 767px) {

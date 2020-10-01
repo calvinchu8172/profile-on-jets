@@ -1,0 +1,16 @@
+.modal.fade#exampleModal{ tabindex: "-1", "aria-labelledby": "exampleModalLabel", "aria-hidden": "true" }
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %h5.modal-title#exampleModalLabel
+          = 'Silver Medal'
+        %button.close{ type: "button", "data-dismiss": "modal", "aria-label": "Close" }
+          %span{"aria-hidden": "true"}
+            = "&times;".html_safe
+      .modal-body
+        .medal-pic
+          = image_tag("medal.jpg")
+      .modal-footer
+        %button.btn.btn-secondary{ type: "button", "data-dismiss": "modal"}
+          = 'Close'
+
