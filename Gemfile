@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jets", ">= 2.3.16"
+gem "jets", ">= 3.0.14"
 
 # Include webpacker if you are you are building html pages
 gem "webpacker", git: "https://github.com/tongueroo/webpacker.git", branch: "jets"
